@@ -1,4 +1,4 @@
-# web-service-rest-valida-campo
+# RS Valida Campo
 ### Protótipo de servidor de recursos para validação de campos de texto
 
 ## MÉTODO GET
