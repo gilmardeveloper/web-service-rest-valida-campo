@@ -74,8 +74,8 @@ public class Service {
 		return parameters.getParameter(index);
 	}
 	
-	private Boolean hasError(RequestParameter solicitacao) {
-		return check.elementOf(solicitacao.getValor(), parameters.getType(solicitacao.getTipo())).validate().hasError();
+	private Boolean hasError(RequestParameter request) {
+		return check.elementOf(request.getValor(), parameters.getType(request.getTipo())).validate().hasError();
 	}
 	
 	private Boolean hasError(String valor, ParametroTipo cpf) {

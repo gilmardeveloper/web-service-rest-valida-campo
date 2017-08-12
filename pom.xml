@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>br.com.webapp</groupId>
+	<groupId>github.com.gilmardeveloper</groupId>
 	<artifactId>validacampo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
@@ -57,7 +57,7 @@
 		</dependency>
 
 		<dependency>
-			<groupId>br.com.gilmarcarlos.developer</groupId>
+			<groupId>github.com.gilmardeveloper</groupId>
 			<artifactId>safeguard</artifactId>
 			<version>0.0.1-RELEASE</version>
 		</dependency>
@@ -82,9 +82,33 @@
 
 
 	<url>https://github.com/gilmardeveloper/web-service-rest-valida-campo</url>
+	<description>Servidor de recursos para validação de campos de texto</description>
+	
 	<organization>
 		<name>Gilmar Carlos</name>
 		<url>https://github.com/gilmardeveloper</url>
 	</organization>
-	<description>Servidor de recursos para validação de campos de texto</description>
+
+	<scm>
+		<connection>scm:git:git://github.com/gilmardeveloper/web-service-rest-valida-campo.git</connection>
+		<developerConnection>scm:git:ssh://github.com:gilmardeveloper/web-service-rest-valida-campo.git</developerConnection>
+		<url>https://github.com/gilmardeveloper/web-service-rest-valida-campo</url>
+	</scm>
+	
+	<licenses>
+		<license>
+			<name>The Apache License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<name>Gilmar Carlos</name>
+			<email>gilmarcarlos.developer@gmail.com</email>
+			<organization>GilmarDeveloper</organization>
+			<organizationUrl>https://github.com/gilmardeveloper</organizationUrl>
+		</developer>
+	</developers>
+	
 </project>

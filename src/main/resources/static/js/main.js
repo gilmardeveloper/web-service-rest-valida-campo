@@ -34,4 +34,4 @@ function addLinha(result){
 				</tr>`;
 
     $("tbody").append(linha);
-}
+};
