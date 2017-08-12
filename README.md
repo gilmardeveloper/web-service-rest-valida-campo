@@ -56,7 +56,7 @@
                     contentType: "application/json",
 
                 success: (result,status,xhr) => {
-                                                    addLinha(result);
+                                                    console.log(result.status);
                                                 }, 
                 error: () => console.log("error")
         });
