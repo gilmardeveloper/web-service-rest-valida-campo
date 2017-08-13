@@ -13,16 +13,41 @@
 
     ```java
      /* exemplo */
-     /rs/valida/11988881234/telefone
-     /rs/valida/96205663279/cpf
+     https://rsvalidacampo.herokuapp.com/rs/valida/11988881234/telefone
+     https://rsvalidacampo.herokuapp.com/rs/valida/96205663279/cpf
 
     ```
-* RESPOSTA
+ * RESPOSTA
   - application/json
  
   ```java
      {"valor":"11988881234","tipo":"telefone","statusText":"OK","status":200}
      {"valor":"96205663279","tipo":"cpf","statusText":"OK","status":200}
+  ```
+ * URI
+  
+ - /rs/parametro
+ - /rs/parametro/{codigo_do_parametro}
+
+    ```java
+     /* exemplo 1 */
+     https://rsvalidacampo.herokuapp.com/rs/parametro
+     /* exemplo 2 */
+     https://rsvalidacampo.herokuapp.com/rs/parametro/0
+
+    ```
+ 
+* RESPOSTA
+  - application/json
+ 
+  ```java
+     
+     /* exemplo 1 */
+     {"parameters":[{"codigo":0,"tipo":"cpf"},{"codigo":1,"tipo":"cpf_formatado"},{"codigo":2,"tipo":"titulo_de_eleitor"},...
+     
+     /* exemplo 2 */
+     {"codigo":0,"tipo":"cpf"}
+     
   ```
 
 ## MÉTODO POST
