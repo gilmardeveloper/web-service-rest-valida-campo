@@ -9,6 +9,7 @@ import javax.ws.rs.core.MediaType;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import br.com.safeguard.interfaces.Check;
 import br.com.safeguard.types.ParametroTipo;
@@ -26,7 +27,8 @@ public class Service {
 	
 	@Autowired
 	private ParameterHelper parameters;
-		
+	
+	@CrossOrigin
 	@Path("valida/{valor}/telefone")
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
@@ -35,6 +37,7 @@ public class Service {
 		return new ResponseJson(new RequestParameter(valor, "telefone"), result);
 	}
 	
+	@CrossOrigin
 	@Path("valida/{valor}/cpf")
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
@@ -43,6 +46,7 @@ public class Service {
 		return new ResponseJson(new RequestParameter(valor, "cpf"), result);
 	}
 	
+	@CrossOrigin
 	@Path("valida/{valor}/cnpj")
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
@@ -52,6 +56,7 @@ public class Service {
 		return new ResponseJson(new RequestParameter(valor, "cnpj"), result);
 	}
 	
+	@CrossOrigin
 	@Path("valida")
 	@POST
 	@Produces(MediaType.APPLICATION_JSON)
@@ -59,7 +64,8 @@ public class Service {
 		Boolean result = hasError(request);
 		return new ResponseJson(request, result);
 	}
-
+	
+	@CrossOrigin
 	@Path("parametro")
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
@@ -67,6 +73,7 @@ public class Service {
 		return parameters;
 	}
 	
+	@CrossOrigin
 	@Path("parametro/{index}")
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
