@@ -4,6 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.context.annotation.RequestScope;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 import br.com.safeguard.check.SafeguardCheck;
 import br.com.safeguard.interfaces.Check;
@@ -20,5 +23,15 @@ public class ValidacampoApplication {
 	public Check validator() {
 		return new SafeguardCheck();
 	}
+	
+	@Bean
+    public WebMvcConfigurer corsConfigurer() {
+        return new WebMvcConfigurerAdapter() {
+            @Override
+            public void addCorsMappings(CorsRegistry registry) {
+                registry.addMapping("/rs/**");
+            }
+        };
+    }
 	
 }
