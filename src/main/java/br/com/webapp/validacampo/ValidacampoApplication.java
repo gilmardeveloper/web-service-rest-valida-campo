@@ -29,7 +29,10 @@ public class ValidacampoApplication {
         return new WebMvcConfigurerAdapter() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/rs/**");
+                registry.addMapping("/rs/**").allowedOrigins("http://localhost:8080");
+                registry.addMapping("/rs/**").allowedOrigins("http://187.114.115.52:80");
+                registry.addMapping("/rs/**").allowedOrigins("http://187.114.115.52:8080");
+                registry.addMapping("/rs/**").allowedOrigins("https://rsvalidacampo.herokuapp.com/");
             }
         };
     }
