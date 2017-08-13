@@ -1,6 +1,8 @@
 # RS Valida Campo
 ### Protótipo de servidor de recursos para validação de campos de texto
 
+* [Site](https://rsvalidacampo.herokuapp.com/) 
+
 ## MÉTODO GET
 
 * TIPOS DE VALIDAÇÃO
