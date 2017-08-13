@@ -4,10 +4,12 @@ import javax.ws.rs.ApplicationPath;
 
 import org.glassfish.jersey.server.ResourceConfig;
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import br.com.webapp.validacampo.service.Service;
 
 @Component
+@CrossOrigin
 @ApplicationPath("rs")
 public class JerseyConfig extends ResourceConfig {
 	

@@ -19,6 +19,7 @@ import br.com.webapp.validacampo.resource.ResponseJson;
 import br.com.webapp.validacampo.resource.RequestParameter;
 
 @Component
+@CrossOrigin
 @Path("/")
 public class Service {
 	
@@ -28,7 +29,7 @@ public class Service {
 	@Autowired
 	private ParameterHelper parameters;
 	
-	@CrossOrigin
+	
 	@Path("valida/{valor}/telefone")
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
@@ -37,7 +38,7 @@ public class Service {
 		return new ResponseJson(new RequestParameter(valor, "telefone"), result);
 	}
 	
-	@CrossOrigin
+	
 	@Path("valida/{valor}/cpf")
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
@@ -46,7 +47,7 @@ public class Service {
 		return new ResponseJson(new RequestParameter(valor, "cpf"), result);
 	}
 	
-	@CrossOrigin
+	
 	@Path("valida/{valor}/cnpj")
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
@@ -56,7 +57,7 @@ public class Service {
 		return new ResponseJson(new RequestParameter(valor, "cnpj"), result);
 	}
 	
-	@CrossOrigin
+	
 	@Path("valida")
 	@POST
 	@Produces(MediaType.APPLICATION_JSON)
@@ -65,7 +66,7 @@ public class Service {
 		return new ResponseJson(request, result);
 	}
 	
-	@CrossOrigin
+	
 	@Path("parametro")
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
@@ -73,7 +74,7 @@ public class Service {
 		return parameters;
 	}
 	
-	@CrossOrigin
+	
 	@Path("parametro/{index}")
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
