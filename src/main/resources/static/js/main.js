@@ -12,7 +12,7 @@ var objeto = {valor: $("#campo-valor").val(), tipo: $("#campo-tipo").val()};
 var solicitacao = JSON.stringify(objeto);
 
      $.ajax({
-                url: "https://rsvalidacampo.herokuapp.com/rs/valida",
+                url: "/rs/valida",
                 type: "POST", 
                 data: solicitacao,
                 contentType: "application/json",
