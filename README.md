@@ -4,11 +4,13 @@
 ## MÉTODO GET
 
 * TIPOS DE VALIDAÇÃO
+
       - CPF
       - CNPJ
       - TELEFONE
 
 * URI
+
       - /rs/valida/{valor_para_validar}/{tipo_da_validação}
 
           ```java
@@ -18,6 +20,7 @@
 
           ```
  * RESPOSTA
+ 
       - application/json
  
           ```java
@@ -38,6 +41,7 @@
           ```
  
 * RESPOSTA
+
     - application/json
 
         ```java
@@ -53,15 +57,19 @@
 ## MÉTODO POST
 
 * TIPOS DE VALIDAÇÃO
+
      - TODOS
 
 * URI:
+
      - /rs/valida
   
 * CONTENT-TYPE 
+
      - application/json
   
 * PARAMETROS 
+
       -  valor: valor_para_validar 
       - tipo: tipo_da_validação 
   
